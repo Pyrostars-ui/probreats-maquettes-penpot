@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProBeats — Maquettes Penpot</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Barlow Condensed', 'Segoe UI', sans-serif; background: #F5F5F5; color: #292A2D; }
+    header { background: #292A2D; color: #FFF; padding: 40px 80px; }
+    header h1 { font-size: 48px; font-weight: 700; }
+    header p { font-size: 18px; color: #7EDCE1; margin-top: 8px; }
+    .badge { display: inline-block; background: #009099; color: #FFF; padding: 6px 16px; border-radius: 18px; font-size: 14px; font-weight: 600; margin-top: 16px; }
+    main { padding: 40px 80px; }
+    h2 { font-size: 32px; font-weight: 700; margin: 40px 0 24px; color: #292A2D; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 24px; }
+    .card { background: #FFF; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .card-header { padding: 16px 24px; border-bottom: 1px solid #E0E0E0; display: flex; justify-content: space-between; align-items: center; }
+    .card-header h3 { font-size: 18px; font-weight: 700; }
+    .card-type { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 12px; }
+    .type-maquette { background: #009099; color: #FFF; }
+    .type-wireframe { background: #B6A299; color: #FFF; }
+    .card-preview { height: 300px; background: #F5F5F5; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .card-preview.desktop { aspect-ratio: 1440/900; }
+    .card-preview.mobile { aspect-ratio: 375/667; max-width: 200px; margin: 0 auto; }
+    .card-preview .placeholder { text-align: center; color: #9E9E9E; }
+    .card-preview .placeholder .icon { font-size: 48px; margin-bottom: 12px; }
+    .card-preview .placeholder .label { font-size: 14px; font-weight: 600; }
+    .card-preview .device { font-size: 12px; color: #B6A299; margin-top: 8px; }
+    .card-footer { padding: 16px 24px; display: flex; gap: 12px; }
+    .btn { display: inline-block; padding: 10px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; }
+    .btn-primary { background: #009099; color: #FFF; }
+    .btn-secondary { background: #FFF; color: #009099; border: 2px solid #009099; }
+    .flow { background: #FFF; border-radius: 12px; padding: 32px; margin: 24px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .flow-diagram { font-family: monospace; font-size: 14px; line-height: 2; background: #292A2D; color: #7EDCE1; padding: 24px; border-radius: 8px; overflow-x: auto; }
+    .palette { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+    .color-swatch { width: 120px; height: 80px; border-radius: 8px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px; font-size: 11px; font-weight: 600; }
+    .color-swatch.light { color: #292A2D; }
+    .color-swatch.dark { color: #FFF; }
+    footer { background: #292A2D; color: #B6A299; padding: 32px 80px; text-align: center; font-size: 14px; margin-top: 60px; }
+    .section-desc { font-size: 16px; color: #5A5A5A; margin-bottom: 24px; line-height: 1.6; }
+    .stats { display: flex; gap: 40px; margin: 24px 0; }
+    .stat { text-align: center; }
+    .stat .number { font-size: 48px; font-weight: 700; color: #009099; }
+    .stat .label { font-size: 14px; color: #5A5A5A; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ProBeats</h1>
+    <p>Maquettes & Wireframes — Site E-commerce Audio</p>
+    <span class="badge">Projet Penpot — Desktop & Mobile</span>
+  </header>
+
+  <main>
+    <div class="stats">
+      <div class="stat"><div class="number">10</div><div class="label">Pages</div></div>
+      <div class="stat"><div class="number">5</div><div class="label">Composants</div></div>
+      <div class="stat"><div class="number">6</div><div class="label">Couleurs</div></div>
+      <div class="stat"><div class="number">10</div><div class="label">Typographies</div></div>
+      <div class="stat"><div class="number">2</div><div class="label">Versions (Desktop + Mobile)</div></div>
+    </div>
+
+    <h2>Identité Graphique</h2>
+    <div class="palette">
+      <div class="color-swatch dark" style="background:#292A2D;">#292A2D<br>Noir Charbon</div>
+      <div class="color-swatch dark" style="background:#009099;">#009099<br>Teal Foncé</div>
+      <div class="color-swatch dark" style="background:#41B4BB;">#41B4BB<br>Turquoise</div>
+      <div class="color-swatch light" style="background:#7EDCE1;">#7EDCE1<br>Turquoise Clair</div>
+      <div class="color-swatch light" style="background:#B6A299;">#B6A299<br>Taupe</div>
+      <div class="color-swatch light" style="background:#FFFFFF; border:1px solid #E0E0E0;">#FFFFFF<br>Blanc</div>
+    </div>
+    <p class="section-desc">Police : <strong>Barlow Condensed</strong> — Poids : 200, 300, 400, 600, 700, 900</p>
+
+    <h2>Pages Desktop (1440px)</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-header"><h3>Accueil</h3><span class="card-type type-maquette">MAQUETTE</span></div>
+        <div class="card-preview desktop">
+          <div class="placeholder">
+            <div class="icon">[Hero pleine page]</div>
+            <div class="label">Hero + 3 Produits + Témoignages + Footer</div>
+            <div class="device">1440 x 1900px</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="../exports/desktop-accueil.svg" class="btn btn-primary">Voir SVG</a>
+          <a href="#" class="btn btn-secondary">Ouvrir dans Penpot</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>Produit</h3><span class="card-type type-wireframe">WIREFRAME</span></div>
+        <div class="card-preview desktop">
+          <div class="placeholder">
+            <div class="icon">[Bloc Produit]</div>
+            <div class="label">Photo + Prix + CTA + Slogan + 3 Caracs</div>
+            <div class="device">1440 x 1500px</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="../exports/desktop-produit.svg" class="btn btn-primary">Voir SVG</a>
+          <a href="#" class="btn btn-secondary">Ouvrir dans Penpot</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>Commande</h3><span class="card-type type-wireframe">WIREFRAME</span></div>
+        <div class="card-preview desktop">
+          <div class="placeholder">
+            <div class="icon">[Checkout]</div>
+            <div class="label">Récap + Livraison + Paiement</div>
+            <div class="device">1440 x 1060px</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="../exports/desktop-commande.svg" class="btn btn-primary">Voir SVG</a>
+          <a href="#" class="btn btn-secondary">Ouvrir dans Penpot</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>À propos</h3><span class="card-type type-wireframe">WIREFRAME</span></div>
+        <div class="card-preview desktop">
+          <div class="placeholder">
+            <div class="icon">[Histoire]</div>
+            <div class="label">Hero + Timeline + 4 Points forts</div>
+            <div class="device">1440 x 1460px</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="../exports/desktop-a-propos.svg" class="btn btn-primary">Voir SVG</a>
+          <a href="#" class="btn btn-secondary">Ouvrir dans Penpot</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><h3>Assistance</h3><span class="card-type type-wireframe">WIREFRAME</span></div>
+        <div class="card-preview desktop">
+          <div class="placeholder">
+            <div class="icon">[Support]</div>
+            <div class="label">4 Services + FAQ (6) + Contact</div>
+            <div class="device">1440 x 1540px</div>
+          </div>
+        </
